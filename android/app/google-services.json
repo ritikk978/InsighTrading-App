@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1049350208959",
+    "firebase_url": "https://insigh-trding-default-rtdb.firebaseio.com",
+    "project_id": "insigh-trding",
+    "storage_bucket": "insigh-trding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049350208959:android:a76dd84dbd870b1c43350a",
+        "android_client_info": {
+          "package_name": "com.trading.insigh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049350208959-is597mj64avkhsp8l7ad5j9gkm34kiaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV5W29iTF-9vyGmSptUm8liM2VYV5eYCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049350208959-is597mj64avkhsp8l7ad5j9gkm34kiaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

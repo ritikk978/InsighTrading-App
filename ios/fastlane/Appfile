@@ -1,0 +1,8 @@
+app_identifier("com.trading.insigh") # The bundle identifier of your app
+apple_id("craigjsurf@yahoo.com") # Your Apple email address
+
+itc_team_id("123997440") # App Store Connect Team ID
+team_id("ULXR4VNQPS") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

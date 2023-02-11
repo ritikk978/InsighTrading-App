@@ -1,0 +1,54 @@
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+  end
+
+  desc "upload meta"
+  lane :metadata do
+    deliver(
+      submit_for_review: false,
+      skip_binary_upload: true,
+      force: true,
+      metadata_path: "./metadata"
+    )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :test_flight do
+    build_app(clean: true, workspace: "Runner.xcworkspace", scheme: "Runner")
+    upload_to_testflight(
+       skip_waiting_for_build_processing: true
+    )
+  end
+
+
+  desc "Push a new beta build to TestFlight"
+  lane :production do
+    deliver(
+      submit_for_review: true,
+      automatic_release: true,
+      force: true, # Skip HTMl report verification
+      skip_metadata: true,
+      skip_screenshots: true,
+      skip_binary_upload: true
+    )
+  end
+
+  after_all do |lane|
+    slack(
+      message: "Build uploaded"
+    )
+  end
+
+  error do |lane, exception|
+    slack(
+      message: exception.message,
+      success:false
+    )
+  end
+end
